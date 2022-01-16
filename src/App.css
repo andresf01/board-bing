@@ -1,5 +1,13 @@
+html {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  font-family: monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -13,17 +21,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +31,78 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.ball,
+.letter {
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 3rem;
+  border-radius: 50%;
+}
+
+.ball {
+  background-color: rgba(92, 74, 255, 0.5);
+  line-height: 1;
+  color: white;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.ball:hover {
+  cursor: pointer;
+}
+
+.marked {
+  background-color: rgba(92, 74, 255);
+}
+
+.board-row {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ballInput {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.big {
+  width: 18rem;
+  height: 18rem;
+  font-size: 16rem;
+  line-height: 18rem;
+}
+
+.lastBall {
+  width: 100%;
+  display: flex;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  .board-row {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .table {
+    flex-direction: row;
+  }
+
+  .App {
+    flex-direction: column-reverse;
   }
 }
