@@ -47,7 +47,7 @@ function App() {
       </div>
       <div className="ballInput">
         <form onSubmit={handleSubmit}>
-          <input ref={inputRef} type="number" />
+          <input ref={inputRef} type="number" inputMode="numeric" />
           <button onClick={handleAddBall}>Add</button>
           <button onClick={clear}>Clear</button>
         </form>
